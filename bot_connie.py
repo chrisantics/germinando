@@ -37,6 +37,8 @@ Kardex = browser.find_element_by_id('modulo3')
 Kardex.click() 
 
 pagina="https://comunidad2.uaq.mx/portal/index.jsp"
+
+
 for p in pagina:
   if p==pagina[-10]:
        pagina=pagina.replace("index.jsp","cs?idm=3")
