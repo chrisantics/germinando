@@ -24,9 +24,18 @@ password.send_keys(NIP)
 KardexButton = browser.find_element_by_id("botonSubmit")
 KardexButton.click()
 KardexButton = browser.find_element_by_id("modulo4").click()
-##Hasta ahí todo cool
-#problemas:
-#continuar_button = browser.find_element_by_xpath("""//section[@id='mainSection']/input[@value='Continuar >>']""")
-#continuar_button.click()
-#reimpresion=browser.find_element_by_xpath('//table[@style="width:100%;"]/td/a[@href="Reimprime.do?idDoc=178436"][@target="reimpresion"]')
-#reimpresion.click()
+
+#def kardex():
+pagina="https://comunidad2.uaq.mx/portal/index.jsp"
+for p in pagina:
+        if p==pagina[-10]:
+            pagina=pagina.replace("index.jsp","cs?idm=3")
+        #return pagina
+browser.get((pagina))
+#def descargar():
+pagina="https://comunidad2.uaq.mx/DocumentosOficiales/principal.jsp"
+for p in pagina:
+        if p==pagina[-10]:
+            pagina=pagina.replace("principal.jsp","Reimprime.do?idDoc=178436")
+browser.get((pagina))
+browser.close((pagina))
