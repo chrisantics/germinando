@@ -23,15 +23,15 @@ DestinoButton = browser.find_element_by_id("ddlDestino").click()
 SelecionButton = browser.find_element_by_xpath("//select[@name='ddlDestino']/option[@value='220']").click()
 #Especificar la fecha:
 #Abrir calendario fecha de inicio
-CalendarioButton=browser.find_element_by_id("btnCalendarioFI").clear()
+CalendarioButton=browser.find_element_by_id("txtFechaInicio").clear()
 CalendarioButton=browser.find_element_by_id("btnCalendarioFF").click()
 Fecha0=arrow.now().format("DD/MM/YY")
 CalendarioButton=browser.find_element_by_id("txtFechaInicio").send_keys(Fecha0)
 #Abrir calendario fecha final
-CalendarioButton=browser.find_element_by_id("btnCalendarioFF").clear()
-CalendarioButton=browser.find_element_by_id("btnCalendarioFF").click()
+CalendarioButton=browser.find_element_by_id("txtFechaFinal").clear()
+CalendarioButton=browser.find_element_by_id("txtFechaFinal").click()
 Fecha1=arrow.now().format("DD/MM/YY")
-CalendarioButton=browser.find_element_by_id("txtFechaInicio").send_keys(Fecha1)
+CalendarioButton=browser.find_element_by_id("txtFechaFinal").send_keys(Fecha1)
 #Botón buscar
 BuscarButton = browser.find_element_by_id("btnBuscar").click()
 #Descargar tabla:
@@ -41,5 +41,3 @@ BuscarButton = browser.find_element_by_id("btnBuscar").click()
 #como descargar datos de tabla html
 #("//select[@name='element_name']/option[text()='option_text']")
 #driver.findElement(By.xpath("//*[@name='action'][@value='Go']")).click()
-
-
